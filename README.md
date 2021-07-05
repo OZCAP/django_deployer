@@ -6,11 +6,9 @@ This tool makes it easy to launch multiple sites onto one server, including sett
 
 
 ### Prerequisites
-This tool relies on having a Django project ready to go, with an exclusive virtual environment with all of the modules needed for the project, ready installed to it as well as Gunicorn. So to sumarise, you will need:
-
+This tool relies on having a Django project ready to go, with an exclusive virtual environment with all of the modules needed for the project ready installed to it as well as Gunicorn. So to sumarise, you will need:
 #### System
 * Python3
-
 #### Virtual environment
 * Django
 * Gunicorn
