@@ -4,10 +4,17 @@ A one hit tool for preparing a Django project to a server with Gunicorn and Ngin
 When hosting multiple sites on a vps or server, it can be a bit cumbersome and slow to add and configure each site seperately.
 This tool makes it easy to launch multiple sites onto one server, including setting specific user permissions for an added layer of security.
 
+
 ### Prerequisites
-This tool relies on having a Django project ready to go, with an exclusive virtual environment with all of the modules needed for the project, ready installed to it as well as Gunicorn. So to sumarise, in your virtual environment you will need:
-*Django
-*Gunicorn
+This tool relies on having a Django project ready to go, with an exclusive virtual environment with all of the modules needed for the project, ready installed to it as well as Gunicorn. So to sumarise, you will need:
+
+#### System
+* Python3
+
+#### Virtual environment
+* Django
+* Gunicorn
+
 
 ### Usage
 Clone the repository to a directory of choice onto your server.
