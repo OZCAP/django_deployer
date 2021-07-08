@@ -1,0 +1,22 @@
+# Default server
+server {{
+    return 404;
+}}server {{
+    listen 80;
+    server_name {domain};
+
+    location = /favicon.ico {{ access_log off; log_not_found off; }}
+
+    location /static/ {{
+        root {root};
+    }}
+
+    location /media/ {{
+        root {root};
+    }}
+
+    location / {{
+        include proxy_params;
+        proxy_pass http://unix:{root}/{proj}.sock;
+    }}
+}}
