@@ -21,6 +21,9 @@ else:
     print("User add error. Exiting...")
     exit()
 
+print("\nSetting permissions...")
+os.system('sudo chown {} {}'.format(proj, root))
+
 # Create a gunicorn service for the project
 print("\nCreating custom service...")
 try:
