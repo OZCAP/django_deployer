@@ -53,6 +53,7 @@ except:
 
 # Start/Enable the socket connection
 print("Enabling service socket...")
+os.system('sudo systemctl daemon-reload')
 stream = os.popen('sudo systemctl start {}.gunicorn.socket'.format(proj))
 response = stream.read()
 if response == "":
@@ -60,6 +61,7 @@ if response == "":
 else:
     print("Socket start error. Exiting...")
     exit()
+os.system('sudo systemctl daemon-reload')
 stream = os.popen('sudo systemctl enable {}.gunicorn.socket'.format(proj))
 response = stream.read()
 if response == "":
