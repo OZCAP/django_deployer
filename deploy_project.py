@@ -2,7 +2,7 @@
 import os
 
 # User inputs
-proj = input("\nProject name[myproject]: ")
+proj = input("\nProject name[myproject]:  ")
 group = (input("\nUser group for web access(default: webapps): ") or "webapps")
 domain = input("\nDomain name for site[example.com]: ")
 root = input("\nFull path to project directory[/myproject]: ")
