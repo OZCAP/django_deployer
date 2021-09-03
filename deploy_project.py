@@ -12,14 +12,14 @@ if env[-1] == '/': env = env[:-1]
 
 # Create user group (if not already made) and add user to that group
 print(f"\n...\n...\nAdding user {proj} to group {group}...")
+
 os.system(f'sudo groupadd --system {group}')
 stream  = os.popen(f'sudo useradd --system --gid {group} --shell /bin/bash --home {root} {proj}')
 response = stream.read()
 if response == "":
     print("User added successfully!")
 else:
-    print("User add error. Exiting...")
-    exit()
+    print("User already exists. Exiting...")
 
 print("\nSetting permissions...")
 os.system(f'sudo chown {proj} {root}')
