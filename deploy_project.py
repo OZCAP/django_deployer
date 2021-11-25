@@ -7,7 +7,7 @@ group = (input("\nUser group for web access(default: webapps): ") or "webapps")
 domain = input("\nDomain name for site[example.com]: ")
 root = input("\nFull path to project directory[/myproject]: ")
 if root[-1] == '/': root = root[:-1]
-env = input("\nPath to python environment[/myproject/env]: ")
+env = input("\nFull path to virtual environment[/myproject/env]: ")
 if env[-1] == '/': env = env[:-1]
 
 # Create user group (if not already made) and add user to that group
