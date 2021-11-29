@@ -77,9 +77,9 @@ else:
 print("\nReloading daemon...")
 os.system(f'sudo systemctl daemon-reload && sudo systemctl restart {proj}.gunicorn')
 
-# Set ownership of the project folder to the specified user
+# Set ownership of the project contents to specified user
 print("\nSetting permissions...")
-os.system(f'sudo chown {proj} {root}')
+os.system(f'sudo chown {proj} {root}/*')
 
 # Create the configuration for the website
 print("\nCreating nginx website configuration...")
